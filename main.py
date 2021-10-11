@@ -28,8 +28,8 @@ K_G = Client(
 
 # Start Buttonu İcin Def Oluşturalım :)
 def button():
-	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻 Sahibim ",url="t.me/YoungSoftware")]]
-	BUTTON+=[[InlineKeyboardButton(text="🌱 Open Source 🌱",url="https://github.com/AkinYoungSoftware/TgEglenceBot")]]
+	BUTTON=[[InlineKeyboardButton(text="👤 Sahibim ",url="t.me/YoungSoftware")]]
+	BUTTON+=[[InlineKeyboardButton(text="➕ Beni Bir Gruba Ekle ➕",url="https://t.me/EzelDcBot?startgroup=a")]]
 	return InlineKeyboardMarkup(BUTTON)
 
 # Kullanıcı Start Komutunu Kullanınca Selam'layalım :)
@@ -37,7 +37,7 @@ def button():
 async def _(client, message):
 	user = message.from_user # Kullanıcın Kimliğini Alalım
 
-	await message.reply_text(text="**Merhaba {}!**\n\n__Ben Pyrogram Api İle Yazılmış Eğlence Botuyum :)__\n\n**Repom =>** [Open Source](https://github.com/AkinYoungSoftware/TgEglenceBot)\nDoğruluk mu? Cesaret mi? Oyun Komutu => /dc".format(
+	await message.reply_text(text="**Merhaba {}!**\n\n__Ben @TheEzelBoss Tarafından Geliştirilmiş Bir Eğlence Botuyum :)__\n\n** \nDoğruluk Mu? Cesaret Mi? Oyun Komutu => /dc".format(
 		user.mention, # Kullanıcı'nın Adı
 		),
 	disable_web_page_preview=True, # Etiketin Önizlemesi Olmaması İcin Kullanıyoruz
@@ -102,7 +102,7 @@ async def _(client, message):
   user = message.from_user
   
   if user.id not in OWNER_ID:
-    await message.reply_text("**[⚠]** **Sen Yetkili Birisi degilsin!!**")
+    await message.reply_text("**[⚠]** **Sen Yetkili Birisi Değilsin!!**")
     return
   MOD="cekle"
   await message.reply_text("**[⛔]** **Eklenmesini istedigin Cesaret Sorunu Giriniz!**")
@@ -113,10 +113,10 @@ async def _(client, message):
   user = message.from_user
   
   if user.id not in OWNER_ID:
-    await message.reply_text("**[⚠]** **Sen Yetkili Birisi degilsin!!**")
+    await message.reply_text("**[⚠]** **Sen Yetkili Birisi değilsin!!**")
     return
   MOD="cekle"
-  await message.reply_text("**[⛔]** **Eklenmesini istedigin Dogruluk Sorunu Giriniz!**")
+  await message.reply_text("**[⛔]** **Eklenmesini istediğin Doğruluk Sorunu Giriniz!**")
 
 @K_G.on_message(filters.private)
 async def _(client, message):
@@ -135,7 +135,7 @@ async def _(client, message):
     if MOD=="dekle":
       C_LİST.append(str(message.text))
       MOD=None
-      await message.reply_text("**[⛔]** __Metin Dogruluk Sorusu Olarak Eklendi!__")
+      await message.reply_text("**[⛔]** __Metin Doğruluk Sorusu Olarak Eklendi!__")
       return
 ############################
 
