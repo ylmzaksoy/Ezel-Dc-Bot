@@ -28,7 +28,7 @@ K_G = Client(
 
 # Start Buttonu İcin Def Oluşturalım :)
 def button():
-	BUTTON=[[InlineKeyboardButton(text="👤 Sahibim ",url="t.me/YoungSoftware")]]
+	BUTTON=[[InlineKeyboardButton(text="👤 Sahibim ",url="t.me/theezelboss")]]
 	BUTTON+=[[InlineKeyboardButton(text="➕ Beni Bir Gruba Ekle ➕",url="https://t.me/EzelDcBot?startgroup=a")]]
 	return InlineKeyboardMarkup(BUTTON)
 
@@ -37,7 +37,7 @@ def button():
 async def _(client, message):
 	user = message.from_user # Kullanıcın Kimliğini Alalım
 
-	await message.reply_text(text="**Merhaba {}!**\n\n__Ben @TheEzelBoss Tarafından Geliştirilmiş Bir Eğlence Botuyum :)__\n\n** \nDoğruluk Mu? Cesaret Mi? Oyun Komutu => /dc".format(
+	await message.reply_text(text="**Merhaba {}!**\n\n__Ben @TheEzelBoss Tarafından Geliştirilmiş Bir Eğlence Botuyum. __\n\n** \nDoğruluk Mu? Cesaret Mi? Oyun Komutu => /dc".format(
 		user.mention, # Kullanıcı'nın Adı
 		),
 	disable_web_page_preview=True, # Etiketin Önizlemesi Olmaması İcin Kullanıyoruz
